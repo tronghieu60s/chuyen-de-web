@@ -50,14 +50,6 @@ export const actEditPost = (post) => {
 };
 
 export const actDeletePost = (post) => {
-    return (dispatch) => {
-      return apiCaller(`products/${post.id}`, "DELETE", null)
-        .then((res) => {
-          if (res.success) {
-            dispatch(actLoadPosts());
-            toast.success("Delete post successfully!");
-          }
-        })
-        .catch(() => toast.error("An error occurred!"));
-  };
+  return (dispatch) => {};
 };
+
