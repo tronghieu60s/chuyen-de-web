@@ -82,8 +82,14 @@ export default function Posts() {
 
   const onDeletePost = async (e) => {
     e.preventDefault();
+
+    if (postSelected?.user_id !== user?.id) {
+      return;
+    }
+
     // request and close modal
     await dispatch(actDeletePost(postSelected));
+    setPostSelected(inputPost);
     document.querySelector("#deleteModal button[data-dismiss='modal']").click();
   };
 
