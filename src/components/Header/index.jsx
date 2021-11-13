@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actLoadSignInUser, actLogoutUser } from "../../redux/actions/authActions";
-import { actSearchPost } from "../../redux/actions/searchTitle";
 import Auth from "../Auth";
 import HeaderAuth from "./HeaderAuth";
 import HeaderLanguages from "./HeaderLanguages";
@@ -28,7 +27,7 @@ export default function Header() {
   };
 
   const onSearch = () => {
-    dispatch(actSearchPost());
+    console.log("search");
   };
 
   return (
