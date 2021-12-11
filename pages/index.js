@@ -3,6 +3,7 @@ import Head from "next/head";
 import Footer from "../src/components/Footer";
 import Header from "../src/components/Header";
 import Posts from "../src/components/Posts";
+import PostsFilter from "../src/components/Posts/PostsFilter";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
         <title>React Confessions</title>
       </Head>
       <Header />
+      <PostsFilter />
       <div className="container">
         <Posts />
       </div>
